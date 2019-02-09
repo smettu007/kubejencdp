@@ -116,8 +116,7 @@ stages{
         {
         sh """
             gcloud auth activate-service-account --key-file=${JENKINSGCLOUDCREDENTIAL}
-            gcloud config set compute/zone asia-southeast1-a
-            gcloud config set compute/region asia-southeast1
+            gcloud config set compute/zone us-central1-a
             gcloud config set project ${GCLOUD_PROJECT_ID}
             gcloud container clusters get-credentials ${GCLOUD_K8S_CLUSTER_NAME}
             
